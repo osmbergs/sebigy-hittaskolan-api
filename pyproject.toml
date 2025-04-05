@@ -1,0 +1,56 @@
+[project]
+name = "backend"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Your Name",email = "you@example.com"}
+]
+
+requires-python = ">=3.11.1,<3.12"
+dependencies = [
+    "fastapi (>=0.115.8,<0.116.0)",
+    "langchain (>=0.3.17,<0.4.0)",
+    "uvicorn (>=0.34.0,<0.35.0)",
+    "python-dotenv (>=1.0.1,<2.0.0)",
+    "fastapi-pagination (>=0.12.34,<0.13.0)",
+    "openapi (>=2.0.0,<3.0.0)",
+    "sqlalchemy (>=2.0.37,<3.0.0)",
+    "openai (>=1.61.0,<2.0.0)",
+    "python-ulid (>=3.0.0,<4.0.0)",
+    "pg8000 (>=1.31.2,<2.0.0)",
+    "psycopg[binary,pool] (>=3.2.4,<4.0.0)",
+    "langgraph (>=0.2.69,<0.3.0)",
+    "langgraph-checkpoint-postgres (>=2.0.13,<3.0.0)",
+    "langchain-openai (>=0.3.3,<0.4.0)",
+    "langchain-community (>=0.3.16,<0.4.0)",
+    "faiss-cpu (>=1.10.0,<2.0.0)",
+    "plotly (>=6.0.0,<7.0.0)",
+    "langchain-experimental (>=0.3.4,<0.4.0)",
+    "pandas (>=2.2.3,<3.0.0)",
+    "polars (==0.19.19)",
+    "pyarrow (>=19.0.0,<20.0.0)",
+    "matplotlib (>=3.10.0,<4.0.0)",
+    "alembic (>=1.14.1,<2.0.0)",
+    "scikit-learn (>=1.6.1,<2.0.0)",
+    "kaleido (==0.2.1)",
+    "xlsxwriter (>=3.2.2,<4.0.0)",
+    "pyjwt (>=2.10.1,<3.0.0)",
+    "cryptography (>=44.0.1,<45.0.0)",
+    "networkx (>=3.4.2,<4.0.0)",
+    "lightgbm (>=4.6.0,<5.0.0)",
+    "celery (>=5.4.0,<6.0.0)",
+    "gevent (>=24.11.1,<25.0.0)",
+    "redis (>=5.2.1,<6.0.0)",
+    "asgiref (>=3.8.1,<4.0.0)",
+    "returns (>=0.24.0,<0.25.0)",
+    "tavily-python (>=0.5.1,<0.6.0)",
+    "duckduckgo-search (>=7.5.2,<8.0.0)",
+    "transformers (>=4.49.0,<5.0.0)",
+    "bs4 (>=0.0.2,<0.0.3)",
+    "torch (>=2.6.0,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
