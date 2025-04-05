@@ -67,6 +67,6 @@ settings: Union[
     TestConfig,
     DevelopmentConfig,
     DevelopmentDockerLocalConfig,
-] = config[os.environ.get("FASTAPI_ENV", "").lower()]()
+] = config[os.environ.get("FASTAPI_ENV", "production").lower()]()
 
 print("config: Settings is " + str(settings))
