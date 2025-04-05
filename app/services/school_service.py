@@ -259,6 +259,7 @@ class SchoolService(BaseService):
             url=details["url"] if "url" in details else None,
             email=details["email"] if "email" in details else None,
             phone=details["phoneNumber"],
+            municipality_code=details["municipalityCode"],
             headmaster=details["headMaster"] if "headMaster" in details else None,
             visit_address_postal_code=details["addresses"][0]["postalCode"],
             visit_address_street=details["addresses"][0]["streetAddress"],

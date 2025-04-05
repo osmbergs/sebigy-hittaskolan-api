@@ -48,7 +48,7 @@ class SchoolRequestUpdateSchema(SchoolRequestBaseSchema):
 
 class SchoolResponseBaseSchema(BaseModel):
     status: Optional[SchoolStatus] = Field(None)
-    types: Optional[dict] = Field(None)
+    types: Union[Optional[Dict], List[Optional[Dict]], List[Optional[str]]]
     school_unit_code: Optional[str] = Field(None)
     created: Optional[datetime] = Field(None)
     updated: Optional[datetime] = Field(None)
