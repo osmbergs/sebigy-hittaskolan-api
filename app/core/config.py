@@ -8,7 +8,8 @@ print("config:Environ is " + str(os.environ.get("FASTAPI_ENV")))
 
 
 class ProductionConfig(BaseSettings):
-    DB_URL: str = str(os.environ.get("DB_URL"))
+    #DB_URL: str = str(os.environ.get("DB_URL"))
+    DB_URL: str = "cockroachdb://gpc:UfK17k3A6FyXLzdthx6N_g@umber-auk-9889.j77.aws-eu-central-1.cockroachlabs.cloud:26257/sebigy-hittaskolan?sslmode=verify-full"
     AUTH0_DOMAIN: str = str(os.environ.get("AUTH0_DOMAIN"))
     AUTH0_API_AUDIENCE: str = str(os.environ.get("AUTH0_API_AUDIENCE"))
     AUTH0_ISSUER: str = str(os.environ.get("AUTH0_ISSUER"))
