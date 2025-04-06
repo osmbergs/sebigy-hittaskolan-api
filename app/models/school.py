@@ -56,3 +56,8 @@ class School(Base):
     geo_lat: Column[str] | str = Column(String, nullable=True)
     geo_long: Column[str] | str = Column(String, nullable=True)
     full_data: Column[bool] | str = Column(Boolean,default=False)
+
+    image_url: Column[str] | str = Column(String, nullable=True)
+    description: Column[str] | str = Column(String, nullable=True)
+
+

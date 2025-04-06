@@ -47,6 +47,7 @@ class SchoolRequestUpdateSchema(SchoolRequestBaseSchema):
 
 
 class SchoolResponseBaseSchema(BaseModel):
+    id:Optional[str]
     status: Optional[SchoolStatus] = Field(None)
     types: Union[Optional[Dict], List[Optional[Dict]], List[Optional[str]]]
     school_unit_code: Optional[str] = Field(None)
@@ -56,17 +57,13 @@ class SchoolResponseBaseSchema(BaseModel):
     name: Optional[str] = Field(None)
     display_name: Optional[str] = Field(None)
     url: Optional[str] = Field(None)
-    email: Optional[str] = Field(None)
-    phone: Optional[str] = Field(None)
-    headmaster: Optional[str] = Field(None)
-    municipality_code: Optional[str] = Field(None)
 
     visit_address_street: Optional[str] = Field(None)
     visit_address_postal_code: Optional[str] = Field(None)
     visit_address_locality: Optional[str] = Field(None)
     geo_lat: Optional[str] = Field(None)
     geo_long: Optional[str] = Field(None)
-
+    image_url:  Optional[str] = Field(None)
 
 class Config:
         orm_mode = True
@@ -81,7 +78,14 @@ class SchoolResponseListSchema(SchoolResponseBaseSchema):
 
 
 class SchoolResponseFullSchema(SchoolResponseBaseSchema):
-    pass
+
+    email: Optional[str] = Field(None)
+    phone: Optional[str] = Field(None)
+    headmaster: Optional[str] = Field(None)
+    municipality_code: Optional[str] = Field(None)
+    description: Optional[str] = Field(None)
+
+
 
 
 SchoolResponseBaseSchema.update_forward_refs()
