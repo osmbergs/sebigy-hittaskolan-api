@@ -4,12 +4,11 @@ import time
 import requests
 from fastapi import Depends, HTTPException, Security
 from fastapi_pagination import Params
-from psycopg import connect
+
 from sqlalchemy import text
 
 from sqlalchemy.orm import Session
 from fastapi_pagination.ext.sqlalchemy import paginate
-from requests.adapters import HTTPAdapter, Retry
 
 from app.core import dt_utils
 from app.core.auth_util import auth, RequestContext
